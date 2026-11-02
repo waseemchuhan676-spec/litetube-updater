@@ -1,0 +1,1 @@
+{"description":"LiteTube distribution landing page and OTA update manifest. Static only — there is deliberately no build script, no framework and no dependency here, so Vercel deploys it as plain static files and never touches any Android tooling.","name":"litetube-updater","private":true,"version":"1.0.0"}
