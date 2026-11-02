@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Downloader for Android TV — LiteTube</title>
+<meta name="description" content="LiteTube is a lightweight video downloader for Android TV, Google TV and TV boxes. D-pad remote control, no ads, direct gallery downloads, built for low-RAM TVs.">
+<link rel="canonical" href="https://littletube.vercel.app/android-tv-video-downloader.html">
+<meta property="og:title" content="Video Downloader for Android TV — LiteTube">
+<meta property="og:description" content="LiteTube is a lightweight video downloader for Android TV, Google TV and TV boxes. D-pad remote control, no ads, direct gallery downloads, built for low-RAM TVs.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://littletube.vercel.app/android-tv-video-downloader.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Video Downloader for Android TV — LiteTube">
+<meta name="twitter:description" content="LiteTube is a lightweight video downloader for Android TV, Google TV and TV boxes. D-pad remote control, no ads, direct gallery downloads, built for low-RAM TVs.">
+<meta name="theme-color" content="#0f0f0f">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0f0f0f; color: #F1F1F1; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+  a:focus, button:focus { outline: 3px solid #FFCC00; outline-offset: 3px; transform: scale(1.04); box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); }
+  a { color: #93C5FD; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 24px 20px 56px; }
+  .nav { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; font-size: 15px; margin-bottom: 28px; }
+  .nav .logo { font-weight: 800; font-size: 20px; color: #FFFFFF; text-decoration: none; margin-right: auto; }
+  h1 { font-size: 40px; font-size: clamp(30px, 5vw, 46px); margin: 0 0 16px; }
+  .answer { background: #212121; border: 1px solid #303030; border-left: 4px solid #FF0000; border-radius: 12px; padding: 18px 20px; font-size: 18px; color: #F1F1F1; margin: 0 0 24px; }
+  .badge { display: inline-block; border: 1px solid #FF0000; background: rgba(255, 0, 0, 0.15); color: #FFFFFF; font-weight: 700; font-size: 15px; padding: 8px 18px; border-radius: 999px; margin-bottom: 20px; }
+  .cta { display: block; width: 100%; max-width: 560px; margin: 0 auto 16px; background: #FF0000; color: #FFFFFF; font-size: 22px; font-weight: 800; text-decoration: none; text-align: center; padding: 20px 16px; border-radius: 14px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .cta:hover { background: #D90000; }
+  .center { text-align: center; }
+  h2 { font-size: 26px; margin: 36px 0 14px; }
+  h3 { font-size: 19px; margin: 24px 0 8px; color: #FFFFFF; }
+  p { color: #AAAAAA; }
+  p strong, li strong { color: #F1F1F1; }
+  ol, ul { color: #AAAAAA; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+  code { background: #0f0f0f; border: 1px solid #303030; border-radius: 6px; padding: 2px 6px; font-size: 14px; color: #F1F1F1; }
+  .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 20px 0; }
+  @media (min-width: 820px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  .card { background: #212121; border: 1px solid #303030; border-radius: 16px; padding: 24px; }
+  .card h3 { margin-top: 0; }
+  .card p { margin: 0; }
+  .legal { background: #212121; border: 1px solid #303030; border-radius: 16px; padding: 24px; color: #AAAAAA; font-size: 15px; margin: 36px 0; }
+  .legal p { margin: 0 0 10px; }
+  .legal p:last-child { margin-bottom: 0; }
+  footer { text-align: center; color: #717171; font-size: 14px; }
+  footer a { margin: 0 6px; }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is LiteTube available on Google Play?", "acceptedAnswer": { "@type": "Answer", "text": "No. Like other video downloaders, LiteTube is not on Google Play, because Google does not allow apps that download videos from YouTube. It is installed by sideloading: from the TV browser, a USB stick, or ADB." } },
+        { "@type": "Question", "name": "Will LiteTube work on my low-RAM TV box?", "acceptedAnswer": { "@type": "Answer", "text": "LiteTube is designed for 1–2 GB RAM TVs and boxes: a lean interface with no thumbnails, native Media3 playback with hardware acceleration, and no background bloat. It is built for the TVs that heavy apps slow down." } },
+        { "@type": "Question", "name": "Where do LiteTube downloads go?", "acceptedAnswer": { "@type": "Answer", "text": "Videos download directly to the TV gallery, in the Movies/LiteTube folder, and appear in the gallery immediately. Audio downloads go to the Music/LiteTube folder." } },
+        { "@type": "Question", "name": "Does LiteTube have ads?", "acceptedAnswer": { "@type": "Answer", "text": "No. LiteTube has no ads and no in-app purchases. It is free and open source." } },
+        { "@type": "Question", "name": "Is LiteTube safe to install?", "acceptedAnswer": { "@type": "Answer", "text": "LiteTube is open source on GitHub, needs no account or sign-up, uses no proxy servers, and every release publishes its SHA-256 hash so you can verify the file you downloaded. Download it only from this site or the official GitHub releases page." } },
+        { "@type": "Question", "name": "What download quality does LiteTube offer?", "acceptedAnswer": { "@type": "Answer", "text": "LiteTube shows the actual quality of the stream it downloads. It does not upscale video or advertise a quality it cannot deliver." } }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "LiteTube",
+      "applicationCategory": "MultimediaApplication",
+      "operatingSystem": "Android",
+      "url": "https://littletube.vercel.app/",
+      "downloadUrl": "https://github.com/waseemchuhan676-spec/litetube/releases",
+      "description": "Ultra-lightweight video player and downloader for phones and low-spec Android TV boxes.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<main class="wrap">
+
+  <nav class="nav">
+    <a class="logo" href="/">📺 LiteTube</a>
+    <a href="how-to-run-youtube-on-led-tv.html">YouTube on LED TV</a>
+    <a href="fire-tv-stick.html">Fire Stick</a>
+    <a href="vidmate-for-android-tv.html">VidMate for TV</a>
+  </nav>
+
+  <h1>Video Downloader for Android TV</h1>
+  <p class="answer">LiteTube is a lightweight video downloader built for Android TV, Google TV and Android TV boxes. It is remote-controlled with a D-pad, has no ads, works on 1–2 GB RAM TVs, and saves downloads directly to the TV gallery (Movies/LiteTube).</p>
+
+  <div class="center">
+    <span class="badge" id="versionBadge">Latest Release: v1.0.0</span>
+    <a class="cta" id="downloadBtn" href="https://github.com/waseemchuhan676-spec/litetube/releases/latest/download/app-release.apk">⬇ Download APK (Direct)</a>
+    <p><a href="https://github.com/waseemchuhan676-spec/litetube">View Source on GitHub</a> · <a href="https://github.com/waseemchuhan676-spec/litetube/releases">Changelog (Releases)</a></p>
+  </div>
+
+  <h2>Why TV Needs Its Own Downloader</h2>
+  <p>Phone downloader apps are built for touchscreens. On a TV they are awkward: tiny buttons, no remote navigation, heavy interfaces that stutter on low-RAM boxes. LiteTube is built for the TV from the start.</p>
+  <div class="grid">
+    <article class="card">
+      <h3>🖥 Remote-First</h3>
+      <p>Every control is D-pad navigable with a big yellow focus state you can see from the couch. No mouse, no keyboard needed.</p>
+    </article>
+    <article class="card">
+      <h3>🪶 Built for Low RAM</h3>
+      <p>Lean interface with no thumbnails, native Media3 playback with hardware acceleration — made for 1–2 GB RAM TVs and boxes.</p>
+    </article>
+    <article class="card">
+      <h3>🚫 No Ads, No Bloat</h3>
+      <p>No ads, no in-app purchases, no proxy servers. Streams play directly over your own connection.</p>
+    </article>
+  </div>
+
+  <h2>How It Works</h2>
+  <ol>
+    <li><strong>Search</strong> for a video inside LiteTube, or open it from a link.</li>
+    <li><strong>Play</strong> it with the built-in Media3 player.</li>
+    <li><strong>Download</strong> it to the gallery — video goes to <code>Movies/LiteTube</code>, audio to <code>Music/LiteTube</code>.</li>
+  </ol>
+
+  <h2>Install on Your TV</h2>
+  <div class="grid">
+    <article class="card">
+      <h3>1 · TV Browser</h3>
+      <p>Open this page in your TV browser, tap Download APK (Direct), open the file, and allow “Install unknown apps” for the browser.</p>
+    </article>
+    <article class="card">
+      <h3>2 · USB Stick</h3>
+      <p>Download the APK on your phone or PC, copy it to a USB stick, plug it into the TV, and open it with the TV file manager.</p>
+    </article>
+    <article class="card">
+      <h3>3 · ADB</h3>
+      <p>From a PC: <code>adb connect &lt;tv-ip&gt;:5555</code>, then <code>adb install app-release.apk</code>.</p>
+    </article>
+  </div>
+
+  <h2>Devices That Work</h2>
+  <p>Android TV (Sony, Philips, TCL), Google TV, most Android TV boxes, and <a href="fire-tv-stick.html">Fire TV Stick</a>. Samsung Tizen and LG webOS TVs cannot install Android APKs directly — they need a Fire Stick or Android box plugged in (see <a href="how-to-run-youtube-on-led-tv.html">how to run YouTube on any LED TV</a>).</p>
+
+  <h2>Frequently Asked Questions</h2>
+  <section class="faq">
+    <h3>Is LiteTube available on Google Play?</h3>
+    <p>No. Like other video downloaders, LiteTube is not on Google Play, because Google does not allow apps that download videos from YouTube. It is installed by sideloading: from the TV browser, a USB stick, or ADB.</p>
+    <h3>Will LiteTube work on my low-RAM TV box?</h3>
+    <p>LiteTube is designed for 1–2 GB RAM TVs and boxes: a lean interface with no thumbnails, native Media3 playback with hardware acceleration, and no background bloat. It is built for the TVs that heavy apps slow down.</p>
+    <h3>Where do LiteTube downloads go?</h3>
+    <p>Videos download directly to the TV gallery, in the Movies/LiteTube folder, and appear in the gallery immediately. Audio downloads go to the Music/LiteTube folder.</p>
+    <h3>Does LiteTube have ads?</h3>
+    <p>No. LiteTube has no ads and no in-app purchases. It is free and open source.</p>
+    <h3>Is LiteTube safe to install?</h3>
+    <p>LiteTube is open source on GitHub, needs no account or sign-up, uses no proxy servers, and every release publishes its SHA-256 hash so you can verify the file you downloaded. Download it only from this site or the official GitHub releases page.</p>
+    <h3>What download quality does LiteTube offer?</h3>
+    <p>LiteTube shows the actual quality of the stream it downloads. It does not upscale video or advertise a quality it cannot deliver.</p>
+  </section>
+
+  <section class="legal">
+    <p>LiteTube is not distributed through Google Play. Installing it requires allowing “Install unknown apps” for your browser or file manager — a standard Android permission for apps installed outside the store.</p>
+    <p>Use the downloader only for content you have the rights to (your own uploads, Creative Commons, public domain). LiteTube is an independent player and is not affiliated with YouTube or Google.</p>
+  </section>
+
+  <footer>
+    <p>
+      <a href="/">Home</a>
+      <a href="how-to-run-youtube-on-led-tv.html">YouTube on LED TV</a>
+      <a href="fire-tv-stick.html">Fire Stick</a>
+      <a href="vidmate-for-android-tv.html">VidMate for TV</a>
+      <a href="https://github.com/waseemchuhan676-spec/litetube">GitHub</a>
+    </p>
+    <p>LiteTube · Open source · Built for phones and low-spec Android TV boxes.</p>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var FALLBACK_APK = "https://github.com/waseemchuhan676-spec/litetube/releases/latest/download/app-release.apk";
+    var FALLBACK_VERSION = "v1.0.0";
+    var badge = document.getElementById("versionBadge");
+    var btn = document.getElementById("downloadBtn");
+    if (!badge || !btn) return;
+    badge.textContent = "Latest Release: " + FALLBACK_VERSION;
+    btn.href = FALLBACK_APK;
+    function fetchWithTimeout(url, ms) {
+      var controller = (typeof AbortController !== "undefined") ? new AbortController() : null;
+      var timer = null;
+      if (controller) { timer = setTimeout(function () { controller.abort(); }, ms); }
+      var options = controller ? { signal: controller.signal } : {};
+      return fetch(url, options).then(function (res) {
+        if (timer) clearTimeout(timer);
+        if (!res.ok) throw new Error("bad status: " + res.status);
+        return res.json();
+      }).catch(function (err) {
+        if (timer) clearTimeout(timer);
+        throw err;
+      });
+    }
+    function withSingleV(version) { version = String(version).replace(/^v/, ""); return "v" + version; }
+    function setFromManifest(data) {
+      if (data && data.versionName) { badge.textContent = "Latest Version: " + withSingleV(data.versionName); }
+      if (data && data.apkUrl) { btn.href = data.apkUrl; }
+    }
+    function setFromGithubRelease(rel) {
+      if (rel && rel.tag_name) { badge.textContent = "Latest Version: " + withSingleV(rel.tag_name); }
+      var assets = (rel && rel.assets) || [];
+      for (var i = 0; i < assets.length; i++) {
+        if (assets[i].name === "app-release.apk" && assets[i].browser_download_url) { btn.href = assets[i].browser_download_url; return; }
+      }
+    }
+    try {
+      if (typeof fetch !== "function") return;
+      fetchWithTimeout("update.json", 3000)
+        .then(setFromManifest)
+        .catch(function () {
+          return fetchWithTimeout("https://api.github.com/repos/waseemchuhan676-spec/litetube/releases/latest", 3000)
+            .then(setFromGithubRelease)
+            .catch(function () { /* stay on fallback, silently */ });
+        });
+    } catch (e) { /* fallback stays; never show errors */ }
+  })();
+</script>
+</body>
+</html>

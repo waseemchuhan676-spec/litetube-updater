@@ -10,6 +10,14 @@
 
 - [update.json](https://littletube.vercel.app/update.json): JSON manifest the LiteTube app checks for updates. Fields: versionCode, versionName, apkUrl, sha256, releaseNotes. The app downloads a newer APK only when the manifest versionCode is higher than the installed build, and installs it only when the APK's SHA-256 matches the manifest.
 
+## TV pages
+
+- [How to Run YouTube on LED TV](https://littletube.vercel.app/how-to-run-youtube-on-led-tv.html): Four ways to run YouTube on any LED TV — the official YouTube app on smart TVs, casting from a phone, a Fire TV Stick or Android box for non-smart TVs, and the LiteTube sideload for downloads and low-spec TVs — with FAQs.
+- [LED TV Mein YouTube Kaisy Chalain (Roman Urdu)](https://littletube.vercel.app/led-tv-mein-youtube-kaisy-chalain.html): Roman Urdu version of the YouTube-on-LED-TV guide — the same 4 methods with FAQs.
+- [Video Downloader for Android TV](https://littletube.vercel.app/android-tv-video-downloader.html): LiteTube for Android TV, Google TV and TV boxes — D-pad remote control, no ads, direct gallery downloads, built for low-RAM TVs.
+- [Video Downloader for Fire TV Stick](https://littletube.vercel.app/fire-tv-stick.html): Install LiteTube on a Fire TV Stick with the Downloader app (no USB needed) or ADB.
+- [VidMate for Android TV](https://littletube.vercel.app/vidmate-for-android-tv.html): Honest comparison — VidMate is made for phones, not TV remotes; LiteTube is the TV-first alternative.
+
 ## Source code
 
 - [LiteTube app source](https://github.com/waseemchuhan676-spec/litetube): Android app source code (Kotlin, AndroidX Media3, NewPipeExtractor). Includes the in-app updater, Gallery downloader, and TV D-pad navigation.
