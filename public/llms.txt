@@ -1,0 +1,17 @@
+# LiteTube
+
+> LiteTube is an ultra-lightweight video player for phones and low-spec Android TV boxes. It is distributed by sideloading from this site, not through Google Play. The app resolves and plays videos client-side and can download videos to the public media library (Movies / Music). Use the downloader only for content you have the rights to (your own uploads, Creative Commons, public domain).
+
+## Download
+
+- [LiteTube — Download](https://littletube.vercel.app/): Download page with install instructions for Android TV / Smart LED (TV browser, USB stick, or ADB), Android mobile, and the latest version info. The Download APK button is wired to the update manifest below.
+
+## Update manifest
+
+- [update.json](https://littletube.vercel.app/update.json): JSON manifest the LiteTube app checks for updates. Fields: versionCode, versionName, apkUrl, sha256, releaseNotes. The app downloads a newer APK only when the manifest versionCode is higher than the installed build, and installs it only when the APK's SHA-256 matches the manifest.
+
+## Source code
+
+- [LiteTube app source](https://github.com/waseemchuhan676-spec/litetube): Android app source code (Kotlin, AndroidX Media3, NewPipeExtractor). Includes the in-app updater, Gallery downloader, and TV D-pad navigation.
+- [LiteTube releases](https://github.com/waseemchuhan676-spec/litetube/releases): Published APK releases with SHA-256 hashes.
+- [This site's source](https://github.com/waseemchuhan676-spec/litetube-updater): Source of this landing page, the update manifest, and the Vercel configuration.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://littletube.vercel.app/sitemap.xml
