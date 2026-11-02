@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiteTube — Download</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #0B0F14;
+    color: #FFFFFF;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 48px; }
+  h1 { font-size: 40px; margin: 0 0 8px; }
+  .tagline { color: #8A9BA8; font-size: 18px; margin: 0 0 24px; }
+  .card {
+    background: #131C26;
+    border: 1px solid #26374A;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .version { font-size: 18px; font-weight: 700; }
+  .notes { color: #C7D3DE; white-space: pre-line; }
+  /* Big, TV-friendly button: large tap target, high contrast, visible focus. */
+  .download-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #FFEB3B;
+    color: #0B0F14;
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 20px 16px;
+    border-radius: 14px;
+    margin: 20px 0 12px;
+  }
+  .download-btn:focus, .download-btn:hover {
+    outline: 4px solid #00E5FF;
+    outline-offset: 2px;
+  }
+  .secondary { color: #93C5FD; font-size: 15px; }
+  h2 { font-size: 22px; margin: 0 0 10px; }
+  ol { padding-left: 22px; color: #C7D3DE; }
+  li { margin-bottom: 10px; }
+  code {
+    background: #0B0F14;
+    border: 1px solid #26374A;
+    border-radius: 6px;
+    padding: 2px 6px;
+    font-size: 14px;
+  }
+  .muted { color: #8A9BA8; font-size: 14px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>📺 LiteTube</h1>
+  <p class="tagline">Ultra-lightweight video player for phones and low-spec Android TV boxes.</p>
+
+  <section class="card">
+    <div class="version" id="versionLine">Latest version: loading…</div>
+    <p class="notes" id="notesLine"></p>
+    <!-- Default href is the releases page (never a dead "#" link): if the
+         manifest loads, it is replaced with the exact APK URL below. -->
+    <a class="download-btn" id="downloadBtn" href="https://github.com/waseemchuhan676-spec/litetube/releases" autofocus>⬇ Download APK</a>
+    <p class="muted" id="fallbackLine" style="display:none;">
+      Could not load the latest version info. Get the APK from the
+      <a class="secondary" href="https://github.com/waseemchuhan676-spec/litetube/releases">releases page</a> instead.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>Install on Android TV / Smart LED</h2>
+    <ol>
+      <li><strong>From the TV browser (easiest):</strong> open this page on the TV
+        browser, tap <strong>Download APK</strong>, then open the downloaded file.
+        When asked, allow <strong>“Install unknown apps”</strong> for the browser.</li>
+      <li><strong>From a USB stick:</strong> download the APK on your phone or PC,
+        copy it to a USB stick, plug it into the TV, open it with the TV file
+        manager, and install. If blocked, allow <strong>“Install unknown apps”</strong>
+        for the file manager app first.</li>
+      <li><strong>From a PC with ADB:</strong>
+        <code>adb connect &lt;tv-ip&gt;:5555</code> then
+        <code>adb install app-release.apk</code></li>
+    </ol>
+  </section>
+
+  <section class="card">
+    <h2>Install on Android mobile</h2>
+    <ol>
+      <li>Tap <strong>Download APK</strong> above.</li>
+      <li>Open the downloaded file and tap <strong>Install</strong>. If asked,
+        allow <strong>“Install unknown apps”</strong> for your browser once.</li>
+    </ol>
+    <p class="muted">LiteTube is distributed by sideloading, not through Google Play.
+      Use the downloader for content you have the rights to (your own uploads,
+      Creative Commons, public domain).</p>
+  </section>
+</main>
+
+<script>
+  // Single self-contained script, no external dependencies.
+  // Reads update.json from the same deployment and wires the button to it.
+  fetch('update.json')
+    .then(function (res) {
+      if (!res.ok) throw new Error('update.json not reachable');
+      return res.json();
+    })
+    .then(function (data) {
+      document.getElementById('versionLine').textContent =
+        'Latest version: ' + data.versionName + ' (build ' + data.versionCode + ')';
+      document.getElementById('notesLine').textContent = data.releaseNotes || '';
+      var btn = document.getElementById('downloadBtn');
+      btn.href = data.apkUrl;
+    })
+    .catch(function () {
+      document.getElementById('versionLine').textContent = 'Latest version: see releases page';
+      document.getElementById('fallbackLine').style.display = 'block';
+      document.getElementById('downloadBtn').href =
+        'https://github.com/waseemchuhan676-spec/litetube/releases';
+    });
+</script>
+</body>
+</html>
