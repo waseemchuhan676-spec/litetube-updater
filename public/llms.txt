@@ -18,6 +18,12 @@
 - [Video Downloader for Fire TV Stick](https://littletube.vercel.app/fire-tv-stick.html): Install LittleTube on a Fire TV Stick with the Downloader app (no USB needed) or ADB.
 - [VidMate for Android TV](https://littletube.vercel.app/vidmate-for-android-tv.html): Honest comparison — VidMate is made for phones, not TV remotes; LittleTube is the TV-first alternative.
 
+## Download pages
+
+- [Download LittleTube for Android](https://littletube.vercel.app/download-android.html): APK download for Android phones, tablets, Android TV and Google TV — version 1.0.0, Android 5.0+, free, no ads, with install steps and FAQs.
+- [LittleTube for PC](https://littletube.vercel.app/download-pc.html): Watch in your browser with the web player (no install), or run the full Android app on a PC with an emulator — with steps and FAQs.
+- [LittleTube for iPhone & iPad](https://littletube.vercel.app/download-apple.html): Honest answer — not available for iOS, because APK files cannot be installed on iPhones or iPads.
+
 ## Source code
 
 - [LittleTube app source](https://github.com/waseemchuhan676-spec/litetube): Android app source code (Kotlin, AndroidX Media3, NewPipeExtractor). Includes the in-app updater, Gallery downloader, and TV D-pad navigation.

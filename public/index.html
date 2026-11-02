@@ -218,6 +218,10 @@
   .legal p { margin: 0 0 10px; }
   .legal p:last-child { margin-bottom: 0; }
   footer { text-align: center; color: #717171; font-size: 14px; }
+  .dl-grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 20px 0; }
+  @media (min-width: 820px) { .dl-grid { grid-template-columns: repeat(3, 1fr); } }
+  .dl-card { background: #12233d; border: 1px solid #243a5e; border-radius: 16px; padding: 24px; }
+  .dl-card h3 { margin-top: 0; }
 </style>
 </head>
 <body>
@@ -306,6 +310,26 @@
   </section>
 
   <!-- Legal / sideloading notice -->
+    <section>
+    <h2>Download LittleTube</h2>
+    <div class="dl-grid">
+      <div class="dl-card">
+        <h3>📱 For Android</h3>
+        <p>Phones and Android TV. Version 1.0.0, Android 5.0+, free, no ads.</p>
+        <p><a href="download-android.html">Download for Android →</a></p>
+      </div>
+      <div class="dl-card">
+        <h3>💻 For PC</h3>
+        <p>Watch instantly in your browser — no install. For downloads, use the Android emulator.</p>
+        <p><a href="download-pc.html">LittleTube for PC →</a></p>
+      </div>
+      <div class="dl-card">
+        <h3>🍎 For Apple</h3>
+        <p>Not available for iPhone or iPad — APK files cannot be installed on iOS.</p>
+        <p><a href="download-apple.html">Why no iPhone version? →</a></p>
+      </div>
+    </div>
+  </section>
   <section class="legal">
     <h2>Sideloading Notice</h2>
     <p>LittleTube is not distributed through Google Play. Installing it requires allowing “Install unknown apps” for your browser or file manager — a standard Android permission for apps installed outside the store.</p>
@@ -313,7 +337,7 @@
   </section>
 
   <footer>
-    <p><a href="how-to-run-youtube-on-led-tv.html">How to Run YouTube on LED TV</a> · <a href="led-tv-mein-youtube-kaisy-chalain.html">LED TV Mein YouTube (Roman Urdu)</a> · <a href="android-tv-video-downloader.html">Video Downloader for Android TV</a> · <a href="fire-tv-stick.html">Fire TV Stick</a> · <a href="vidmate-for-android-tv.html">VidMate for Android TV</a></p>
+    <p><a href="how-to-run-youtube-on-led-tv.html">How to Run YouTube on LED TV</a> · <a href="led-tv-mein-youtube-kaisy-chalain.html">LED TV Mein YouTube (Roman Urdu)</a> · <a href="android-tv-video-downloader.html">Video Downloader for Android TV</a> · <a href="fire-tv-stick.html">Fire TV Stick</a> · <a href="vidmate-for-android-tv.html">VidMate for Android TV</a> · <a href="download-android.html">Download for Android</a> · <a href="download-pc.html">Download for PC</a> · <a href="download-apple.html">Download for Apple</a></p>
     <p>LittleTube · Open source on <a href="https://github.com/waseemchuhan676-spec/litetube">GitHub</a> · Built for phones and low-spec Android TV boxes.</p>
   </footer>
 
