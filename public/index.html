@@ -3,22 +3,23 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LiteTube — Lightweight Video Player &amp; Downloader for Android TV &amp; Mobile</title>
+<title>LittleTube — Lightweight Video Player &amp; Downloader for Android TV &amp; Mobile</title>
 <meta name="description" content="Stream smoothly on low-spec Smart TVs and download videos directly to your device gallery.">
 <link rel="canonical" href="https://littletube.vercel.app/">
-<meta property="og:title" content="LiteTube - Lightweight Video Player &amp; Downloader for Android TV &amp; Mobile">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="LittleTube - Lightweight Video Player &amp; Downloader for Android TV &amp; Mobile">
 <meta property="og:description" content="Stream smoothly on low-spec Smart TVs and download videos directly to your device gallery.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://littletube.vercel.app/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="LiteTube - Lightweight Video Player &amp; Downloader for Android TV &amp; Mobile">
+<meta name="twitter:title" content="LittleTube - Lightweight Video Player &amp; Downloader for Android TV &amp; Mobile">
 <meta name="twitter:description" content="Stream smoothly on low-spec Smart TVs and download videos directly to your device gallery.">
-<meta name="theme-color" content="#0f0f0f">
+<meta name="theme-color" content="#0a1628">
 <style>
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: #0f0f0f;
+    background: #0a1628;
     color: #F1F1F1;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
@@ -43,8 +44,8 @@
     display: inline-block;
     font-size: 64px;
     line-height: 1;
-    background: #212121;
-    border: 1px solid #303030;
+    background: #12233d;
+    border: 1px solid #243a5e;
     border-radius: 24px;
     padding: 18px 22px;
     margin-bottom: 16px;
@@ -90,15 +91,15 @@
   .mockup {
     max-width: 640px;
     margin: 0 auto 40px;
-    background: #000000;
-    border: 1px solid #303030;
+    background: #0a1628;
+    border: 1px solid #243a5e;
     border-radius: 18px;
     padding: 16px;
     text-align: left;
   }
   .mockup-search {
-    background: #212121;
-    border: 1px solid #303030;
+    background: #12233d;
+    border: 1px solid #243a5e;
     border-radius: 999px;
     padding: 10px 16px;
     color: #717171;
@@ -107,7 +108,7 @@
   }
   .mockup-video {
     position: relative;
-    background: linear-gradient(135deg, #212121 0%, #000000 100%);
+    background: linear-gradient(135deg, #12233d 0%, #0a1628 100%);
     border-radius: 12px;
     min-height: 220px;
     aspect-ratio: 16 / 9;
@@ -140,7 +141,7 @@
     right: 14px;
     bottom: 14px;
     height: 6px;
-    background: #303030;
+    background: #243a5e;
     border-radius: 3px;
     overflow: hidden;
   }
@@ -155,8 +156,8 @@
     border-radius: 999px;
   }
   .mockup-btn-ghost {
-    background: #212121;
-    border: 1px solid #303030;
+    background: #12233d;
+    border: 1px solid #243a5e;
     color: #F1F1F1;
     font-size: 15px;
     padding: 10px 18px;
@@ -175,16 +176,16 @@
     .grid { grid-template-columns: repeat(3, 1fr); }
   }
   .card {
-    background: #212121;
-    border: 1px solid #303030;
+    background: #12233d;
+    border: 1px solid #243a5e;
     border-radius: 16px;
     padding: 24px;
   }
   .card h3 { font-size: 19px; margin: 0 0 8px; }
   .card p { color: #AAAAAA; margin: 0; }
   .card code {
-    background: #0f0f0f;
-    border: 1px solid #303030;
+    background: #0a1628;
+    border: 1px solid #243a5e;
     border-radius: 6px;
     padding: 2px 6px;
     font-size: 14px;
@@ -205,8 +206,8 @@
   .card ol { padding-left: 22px; color: #AAAAAA; margin: 0; }
   .card li { margin-bottom: 8px; }
   .legal {
-    background: #212121;
-    border: 1px solid #303030;
+    background: #12233d;
+    border: 1px solid #243a5e;
     border-radius: 16px;
     padding: 24px;
     color: #AAAAAA;
@@ -224,8 +225,8 @@
 
   <!-- Hero -->
   <header class="hero">
-    <div class="app-icon" aria-hidden="true">📺</div>
-    <h1>LiteTube</h1>
+    <div class="app-icon" aria-hidden="true"><svg viewBox="0 0 32 22" width="72" height="50" aria-hidden="true"><rect width="32" height="22" rx="5" fill="#FF0000"/><path d="M13 7.5 L22 11 L13 14.5 Z" fill="#FFFFFF"/></svg></div>
+    <h1>LittleTube</h1>
     <p class="tagline">Ultra-lightweight video player for mobile &amp; low-spec Android TV boxes. Direct gallery downloads, zero bloat, anti-crash playback.</p>
     <!-- Default state is the safe fallback: correct even if JS never runs. -->
     <div><span class="badge" id="versionBadge">Latest Release: v1.0.0</span></div>
@@ -239,7 +240,7 @@
   <!-- App preview: CSS-only mockup of the player interface.
        Decorative (role="img"), deliberately NOT focusable, so a TV remote
        never lands on a control that does nothing. -->
-  <section class="mockup" role="img" aria-label="Preview of the LiteTube player: search bar, video area, and Download to Gallery button.">
+  <section class="mockup" role="img" aria-label="Preview of the LittleTube player: search bar, video area, and Download to Gallery button.">
     <div class="mockup-search">🔍&nbsp; Search videos…</div>
     <div class="mockup-video">
       <div class="mockup-play" aria-hidden="true"></div>
@@ -254,11 +255,11 @@
 
   <!-- Features -->
   <section>
-    <h2>Why LiteTube</h2>
+    <h2>Why LittleTube</h2>
     <div class="grid">
       <article class="card">
         <h3>⬇ Direct Gallery Downloads</h3>
-        <p>Save videos directly to your gallery — the <code>Movies/LiteTube</code> folder — with instant gallery refresh. No file-manager hunting, no extra steps.</p>
+        <p>Save videos directly to your gallery — the <code>Movies/LittleTube</code> folder — with instant gallery refresh. No file-manager hunting, no extra steps.</p>
       </article>
       <article class="card">
         <h3>🛡 Anti-Crash Engine</h3>
@@ -307,13 +308,13 @@
   <!-- Legal / sideloading notice -->
   <section class="legal">
     <h2>Sideloading Notice</h2>
-    <p>LiteTube is not distributed through Google Play. Installing it requires allowing “Install unknown apps” for your browser or file manager — a standard Android permission for apps installed outside the store.</p>
-    <p>Use the downloader only for content you have the rights to (your own uploads, Creative Commons, public domain). LiteTube is an independent player and is not affiliated with YouTube or Google.</p>
+    <p>LittleTube is not distributed through Google Play. Installing it requires allowing “Install unknown apps” for your browser or file manager — a standard Android permission for apps installed outside the store.</p>
+    <p>Use the downloader only for content you have the rights to (your own uploads, Creative Commons, public domain). LittleTube is an independent player and is not affiliated with YouTube or Google.</p>
   </section>
 
   <footer>
     <p><a href="how-to-run-youtube-on-led-tv.html">How to Run YouTube on LED TV</a> · <a href="led-tv-mein-youtube-kaisy-chalain.html">LED TV Mein YouTube (Roman Urdu)</a> · <a href="android-tv-video-downloader.html">Video Downloader for Android TV</a> · <a href="fire-tv-stick.html">Fire TV Stick</a> · <a href="vidmate-for-android-tv.html">VidMate for Android TV</a></p>
-    <p>LiteTube · Open source on <a href="https://github.com/waseemchuhan676-spec/litetube">GitHub</a> · Built for phones and low-spec Android TV boxes.</p>
+    <p>LittleTube · Open source on <a href="https://github.com/waseemchuhan676-spec/litetube">GitHub</a> · Built for phones and low-spec Android TV boxes.</p>
   </footer>
 
 </main>

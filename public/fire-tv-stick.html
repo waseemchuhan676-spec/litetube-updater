@@ -3,27 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Video Downloader for Fire TV Stick — LiteTube</title>
-<meta name="description" content="Install LiteTube on Fire TV Stick with the Downloader app or ADB. A lightweight, no-ads video downloader made for TV remotes and low-RAM devices.">
+<title>Video Downloader for Fire TV Stick — LittleTube</title>
+<meta name="description" content="Install LittleTube on Fire TV Stick with the Downloader app or ADB. A lightweight, no-ads video downloader made for TV remotes and low-RAM devices.">
 <link rel="canonical" href="https://littletube.vercel.app/fire-tv-stick.html">
-<meta property="og:title" content="Video Downloader for Fire TV Stick — LiteTube">
-<meta property="og:description" content="Install LiteTube on Fire TV Stick with the Downloader app or ADB. A lightweight, no-ads video downloader made for TV remotes and low-RAM devices.">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta property="og:title" content="Video Downloader for Fire TV Stick — LittleTube">
+<meta property="og:description" content="Install LittleTube on Fire TV Stick with the Downloader app or ADB. A lightweight, no-ads video downloader made for TV remotes and low-RAM devices.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://littletube.vercel.app/fire-tv-stick.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Video Downloader for Fire TV Stick — LiteTube">
-<meta name="twitter:description" content="Install LiteTube on Fire TV Stick with the Downloader app or ADB. A lightweight, no-ads video downloader made for TV remotes and low-RAM devices.">
-<meta name="theme-color" content="#0f0f0f">
+<meta name="twitter:title" content="Video Downloader for Fire TV Stick — LittleTube">
+<meta name="twitter:description" content="Install LittleTube on Fire TV Stick with the Downloader app or ADB. A lightweight, no-ads video downloader made for TV remotes and low-RAM devices.">
+<meta name="theme-color" content="#0a1628">
 <style>
   * { box-sizing: border-box; }
-  body { margin: 0; background: #0f0f0f; color: #F1F1F1; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
+  body { margin: 0; background: #0a1628; color: #F1F1F1; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; }
   a:focus, button:focus { outline: 3px solid #FFCC00; outline-offset: 3px; transform: scale(1.04); box-shadow: 0 0 20px rgba(255, 204, 0, 0.4); }
   a { color: #93C5FD; }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 24px 20px 56px; }
   .nav { display: flex; gap: 18px; flex-wrap: wrap; align-items: center; font-size: 15px; margin-bottom: 28px; }
   .nav .logo { font-weight: 800; font-size: 20px; color: #FFFFFF; text-decoration: none; margin-right: auto; }
   h1 { font-size: 40px; font-size: clamp(30px, 5vw, 46px); margin: 0 0 16px; }
-  .answer { background: #212121; border: 1px solid #303030; border-left: 4px solid #FF0000; border-radius: 12px; padding: 18px 20px; font-size: 18px; color: #F1F1F1; margin: 0 0 24px; }
+  .answer { background: #12233d; border: 1px solid #243a5e; border-left: 4px solid #FF0000; border-radius: 12px; padding: 18px 20px; font-size: 18px; color: #F1F1F1; margin: 0 0 24px; }
   .badge { display: inline-block; border: 1px solid #FF0000; background: rgba(255, 0, 0, 0.15); color: #FFFFFF; font-weight: 700; font-size: 15px; padding: 8px 18px; border-radius: 999px; margin-bottom: 20px; }
   .cta { display: block; width: 100%; max-width: 560px; margin: 0 auto 16px; background: #FF0000; color: #FFFFFF; font-size: 22px; font-weight: 800; text-decoration: none; text-align: center; padding: 20px 16px; border-radius: 14px; transition: transform 0.15s ease, box-shadow 0.15s ease; }
   .cta:hover { background: #D90000; }
@@ -34,13 +35,13 @@
   p strong, li strong { color: #F1F1F1; }
   ol, ul { color: #AAAAAA; padding-left: 22px; }
   li { margin-bottom: 8px; }
-  code { background: #0f0f0f; border: 1px solid #303030; border-radius: 6px; padding: 2px 6px; font-size: 14px; color: #F1F1F1; }
+  code { background: #0a1628; border: 1px solid #243a5e; border-radius: 6px; padding: 2px 6px; font-size: 14px; color: #F1F1F1; }
   .grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 20px 0; }
   @media (min-width: 820px) { .grid { grid-template-columns: repeat(3, 1fr); } }
-  .card { background: #212121; border: 1px solid #303030; border-radius: 16px; padding: 24px; }
+  .card { background: #12233d; border: 1px solid #243a5e; border-radius: 16px; padding: 24px; }
   .card h3 { margin-top: 0; }
   .card p { margin: 0; }
-  .legal { background: #212121; border: 1px solid #303030; border-radius: 16px; padding: 24px; color: #AAAAAA; font-size: 15px; margin: 36px 0; }
+  .legal { background: #12233d; border: 1px solid #243a5e; border-radius: 16px; padding: 24px; color: #AAAAAA; font-size: 15px; margin: 36px 0; }
   .legal p { margin: 0 0 10px; }
   .legal p:last-child { margin-bottom: 0; }
   footer { text-align: center; color: #717171; font-size: 14px; }
@@ -53,16 +54,16 @@
     {
       "@type": "FAQPage",
       "mainEntity": [
-        { "@type": "Question", "name": "Can I install LiteTube on a Fire TV Stick?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fire TV is based on Android, so LiteTube installs on it. Use the Downloader app (no USB needed) or ADB from a PC on the same Wi-Fi." } },
+        { "@type": "Question", "name": "Can I install LittleTube on a Fire TV Stick?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Fire TV is based on Android, so LittleTube installs on it. Use the Downloader app (no USB needed) or ADB from a PC on the same Wi-Fi." } },
         { "@type": "Question", "name": "Do I need a USB stick for a Fire TV Stick?", "acceptedAnswer": { "@type": "Answer", "text": "No. The Downloader app method needs only the remote: open Downloader, enter littletube.vercel.app, download the APK and install it. ADB needs a PC instead, not a USB stick." } },
-        { "@type": "Question", "name": "Will my Fire TV remote work with LiteTube?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LiteTube is built for D-pad navigation, with a large yellow focus state on every control, so it works fully with the Fire TV remote." } },
-        { "@type": "Question", "name": "What if my Fire Stick warns about unknown sources?", "acceptedAnswer": { "@type": "Answer", "text": "That warning is normal for apps outside the Amazon Appstore. Allow 'Install unknown apps' only for the app you are installing from (Downloader, or ADB), and download LiteTube only from this site or the official GitHub releases page." } },
-        { "@type": "Question", "name": "Is LiteTube free on Fire TV Stick?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LiteTube is free, with no ads and no in-app purchases." } }
+        { "@type": "Question", "name": "Will my Fire TV remote work with LittleTube?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LittleTube is built for D-pad navigation, with a large yellow focus state on every control, so it works fully with the Fire TV remote." } },
+        { "@type": "Question", "name": "What if my Fire Stick warns about unknown sources?", "acceptedAnswer": { "@type": "Answer", "text": "That warning is normal for apps outside the Amazon Appstore. Allow 'Install unknown apps' only for the app you are installing from (Downloader, or ADB), and download LittleTube only from this site or the official GitHub releases page." } },
+        { "@type": "Question", "name": "Is LittleTube free on Fire TV Stick?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. LittleTube is free, with no ads and no in-app purchases." } }
       ]
     },
     {
       "@type": "SoftwareApplication",
-      "name": "LiteTube",
+      "name": "LittleTube",
       "applicationCategory": "MultimediaApplication",
       "operatingSystem": "Android",
       "url": "https://littletube.vercel.app/",
@@ -78,14 +79,14 @@
 <main class="wrap">
 
   <nav class="nav">
-    <a class="logo" href="/">📺 LiteTube</a>
+    <a class="logo" href="/"><svg viewBox="0 0 32 22" width="28" height="19" style="vertical-align:-3px;margin-right:7px" aria-hidden="true"><rect width="32" height="22" rx="5" fill="#FF0000"/><path d="M13 7.5 L22 11 L13 14.5 Z" fill="#FFFFFF"/></svg><span>LittleTube</span></a>
     <a href="how-to-run-youtube-on-led-tv.html">YouTube on LED TV</a>
     <a href="android-tv-video-downloader.html">Android TV</a>
     <a href="vidmate-for-android-tv.html">VidMate for TV</a>
   </nav>
 
   <h1>Video Downloader for Fire TV Stick</h1>
-  <p class="answer">Yes, you can install LiteTube on a Fire TV Stick. Fire TV is Android-based: install it with the Downloader app (no USB needed) or with ADB from a PC on the same Wi-Fi. It is remote-friendly, lightweight and ad-free.</p>
+  <p class="answer">Yes, you can install LittleTube on a Fire TV Stick. Fire TV is Android-based: install it with the Downloader app (no USB needed) or with ADB from a PC on the same Wi-Fi. It is remote-friendly, lightweight and ad-free.</p>
 
   <div class="center">
     <span class="badge" id="versionBadge">Latest Release: v1.0.0</span>
@@ -108,7 +109,7 @@
     <li>Then run: <code>adb install app-release.apk</code></li>
   </ol>
 
-  <h2>Why LiteTube Fits the Fire Stick</h2>
+  <h2>Why LittleTube Fits the Fire Stick</h2>
   <div class="grid">
     <article class="card">
       <h3>🖥 Remote-First</h3>
@@ -120,27 +121,27 @@
     </article>
     <article class="card">
       <h3>🚫 No Ads</h3>
-      <p>No ads, no in-app purchases. Downloads go straight to the gallery (Movies/LiteTube).</p>
+      <p>No ads, no in-app purchases. Downloads go straight to the gallery (Movies/LittleTube).</p>
     </article>
   </div>
 
   <h2>Frequently Asked Questions</h2>
   <section class="faq">
-    <h3>Can I install LiteTube on a Fire TV Stick?</h3>
-    <p>Yes. Fire TV is based on Android, so LiteTube installs on it. Use the Downloader app (no USB needed) or ADB from a PC on the same Wi-Fi.</p>
+    <h3>Can I install LittleTube on a Fire TV Stick?</h3>
+    <p>Yes. Fire TV is based on Android, so LittleTube installs on it. Use the Downloader app (no USB needed) or ADB from a PC on the same Wi-Fi.</p>
     <h3>Do I need a USB stick for a Fire TV Stick?</h3>
     <p>No. The Downloader app method needs only the remote: open Downloader, enter littletube.vercel.app, download the APK and install it. ADB needs a PC instead, not a USB stick.</p>
-    <h3>Will my Fire TV remote work with LiteTube?</h3>
-    <p>Yes. LiteTube is built for D-pad navigation, with a large yellow focus state on every control, so it works fully with the Fire TV remote.</p>
+    <h3>Will my Fire TV remote work with LittleTube?</h3>
+    <p>Yes. LittleTube is built for D-pad navigation, with a large yellow focus state on every control, so it works fully with the Fire TV remote.</p>
     <h3>What if my Fire Stick warns about unknown sources?</h3>
-    <p>That warning is normal for apps outside the Amazon Appstore. Allow 'Install unknown apps' only for the app you are installing from (Downloader, or ADB), and download LiteTube only from this site or the official GitHub releases page.</p>
-    <h3>Is LiteTube free on Fire TV Stick?</h3>
-    <p>Yes. LiteTube is free, with no ads and no in-app purchases.</p>
+    <p>That warning is normal for apps outside the Amazon Appstore. Allow 'Install unknown apps' only for the app you are installing from (Downloader, or ADB), and download LittleTube only from this site or the official GitHub releases page.</p>
+    <h3>Is LittleTube free on Fire TV Stick?</h3>
+    <p>Yes. LittleTube is free, with no ads and no in-app purchases.</p>
   </section>
 
   <section class="legal">
-    <p>LiteTube is not distributed through the Amazon Appstore or Google Play. Installing it requires allowing “Install unknown apps” for the app you install from — a standard permission for apps installed outside the store.</p>
-    <p>Use the downloader only for content you have the rights to (your own uploads, Creative Commons, public domain). LiteTube is an independent player and is not affiliated with YouTube, Google or Amazon.</p>
+    <p>LittleTube is not distributed through the Amazon Appstore or Google Play. Installing it requires allowing “Install unknown apps” for the app you install from — a standard permission for apps installed outside the store.</p>
+    <p>Use the downloader only for content you have the rights to (your own uploads, Creative Commons, public domain). LittleTube is an independent player and is not affiliated with YouTube, Google or Amazon.</p>
   </section>
 
   <footer>
@@ -151,7 +152,7 @@
       <a href="vidmate-for-android-tv.html">VidMate for TV</a>
       <a href="https://github.com/waseemchuhan676-spec/litetube">GitHub</a>
     </p>
-    <p>LiteTube · Open source · Built for phones and low-spec Android TV boxes.</p>
+    <p>LittleTube · Open source · Built for phones and low-spec Android TV boxes.</p>
   </footer>
 
 </main>
