@@ -234,7 +234,7 @@
     <p class="tagline">Ultra-lightweight video player for mobile &amp; low-spec Android TV boxes. Direct gallery downloads, zero bloat, anti-crash playback.</p>
     <!-- Default state is the safe fallback: correct even if JS never runs. -->
     <div><span class="badge" id="versionBadge">Latest Release: v1.0.0</span></div>
-    <a class="cta" id="downloadBtn" href="https://github.com/waseemchuhan676-spec/litetube/releases/latest/download/app-release.apk">⬇ Download APK (Direct)</a>
+    <a class="cta" id="downloadBtn" href="https://github.com/waseemchuhan676-spec/litetube/releases/latest/download/littletube.apk">⬇ Download APK (Direct)</a>
     <p class="secondary-links">
       <a href="https://github.com/waseemchuhan676-spec/litetube">View Source on GitHub</a>
       <a href="https://github.com/waseemchuhan676-spec/litetube/releases">Changelog (Releases)</a>
@@ -303,7 +303,7 @@
         <h3>ADB (Developers)</h3>
         <ol>
           <li>Connect to the TV: <code>adb connect &lt;tv-ip&gt;:5555</code></li>
-          <li>Install: <code>adb install app-release.apk</code></li>
+          <li>Install: <code>adb install littletube.apk</code></li>
         </ol>
       </article>
     </div>
@@ -351,7 +351,7 @@
   // Any failure — network, timeout, bad JSON, old browser — leaves the
   // fallback in place and NEVER shows an error to the user.
   (function () {
-    var FALLBACK_APK = "https://github.com/waseemchuhan676-spec/litetube/releases/latest/download/app-release.apk";
+    var FALLBACK_APK = "https://github.com/waseemchuhan676-spec/litetube/releases/latest/download/littletube.apk";
     var FALLBACK_VERSION = "v1.0.0";
     var badge = document.getElementById("versionBadge");
     var btn = document.getElementById("downloadBtn");
@@ -398,7 +398,7 @@
       }
       var assets = (rel && rel.assets) || [];
       for (var i = 0; i < assets.length; i++) {
-        if (assets[i].name === "app-release.apk" && assets[i].browser_download_url) {
+        if (assets[i].name === "littletube.apk" && assets[i].browser_download_url) {
           btn.href = assets[i].browser_download_url;
           return;
         }
