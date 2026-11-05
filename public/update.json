@@ -1,7 +1,1 @@
-{
-  "apkUrl": "https://github.com/waseemchuhan676-spec/litetube/releases/download/v1.0.0/app-release.apk",
-  "releaseNotes": "Initial release: Gallery downloads and TV D-Pad navigation.",
-  "sha256": "3c6edf149002188581321ecc158fbd40058b6b2efa9d245e2aa8df8889b6eec8",
-  "versionCode": 1,
-  "versionName": "1.0.0"
-}
+{"apkUrl":"https://github.com/waseemchuhan676-spec/litetube/releases/download/v1.1.0/app-release.apk","releaseNotes":"Search ab zyada videos dikhata hai (~30), related videos, search suggestions aur search history (VidMate/SnapTube ki tarah).","sha256":"e853e44d62d00b8f8c39e7429b3731cd3aed072ff07fc496d6af875b10b30792","versionCode":2,"versionName":"1.1.0"}
